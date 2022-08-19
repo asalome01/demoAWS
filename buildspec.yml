@@ -10,11 +10,11 @@ phases:
       - "mv terraform /usr/local/bin/"
   pre_build:
     commands:
-      - terraform $TF_START
+      - terraform init
   build:
     commands:
-      - terraform $TF_PLAN
-      - terraform $TF_COMMAND -auto-approve
+      - terraform plan
+      - terraform apply -auto-approve
 
   post_build:
     commands:
