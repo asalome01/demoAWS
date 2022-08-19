@@ -11,9 +11,9 @@ phases:
   pre_build:
     commands:
       - terraform $TF_START
-      - terraform $TF_PLAN
   build:
     commands:
+      - terraform $TF_PLAN
       - terraform $TF_COMMAND -auto-approve
 
   post_build:
